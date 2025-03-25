@@ -8,3 +8,4 @@
 - git checkout nomebranch (entrar na branch)
 - git add . (adicionar alterações para commit)
 - git commit -m "atualizado com sucesso branch"(Comitar alteracao)
+- git push origem nomebranch (enviar alteracoes git hub)
