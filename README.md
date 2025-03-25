@@ -7,3 +7,4 @@
 - git branch nomebranch (criar branch)
 - git checkout (entrar na branch)
 - git add . (adicionar alterações para commit)
+- git commit -m "atualizado com sucesso branch"(Comitar alteracao)
