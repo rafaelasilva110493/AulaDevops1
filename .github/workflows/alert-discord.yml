@@ -1,0 +1,19 @@
+name: Discord Alert
+
+on:
+  push:
+    branches:
+      - main  # Alerta apenas quando houver push no branch main
+    # Se quiser alertas para qualquer commit em qualquer branch, use:
+    # branches: ['*']
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar alerta para Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d "{\"content\": \"🚀 Novo push no branch main por ${{ github.actor }}.\n🔗 [Ver commit](${{ github.event.head_commit.url }})\"}" \
+               ${{ secrets.DISCORD_WEBHOOK }}
